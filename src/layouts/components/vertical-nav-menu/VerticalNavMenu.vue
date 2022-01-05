@@ -29,6 +29,23 @@
     <!-- Navigation Items -->
     <v-list expand shaped class="vertical-nav-menu-items pr-5">
       <nav-menu-link title="Dashboard" :to="{ name: 'dashboard' }" :icon="icons.mdiHomeOutline"></nav-menu-link>
+      <nav-menu-group title="Server Status" :icon="icons.mdiAbacus">
+        <nav-menu-link
+          title="Maintenance"
+          :icon="icons.mdiAlarmLightOutline"
+          :to="{ name: 'maintenance' }"
+        ></nav-menu-link>
+        <nav-menu-link
+          title="Check Server"
+          :icon="icons.mdiCheckOutline"
+          :to="{ name: 'check-server' }"
+        ></nav-menu-link>
+      </nav-menu-group>
+      <nav-menu-link title="Report" :to="{ name: 'report' }" :icon="icons.mdiFileMultipleOutline"></nav-menu-link>
+      <nav-menu-link title="Players" :to="{ name: 'players' }" :icon="icons.mdiAccountDetailsOutline"></nav-menu-link>
+      <nav-menu-link title="Admin" :to="{ name: 'admin' }" :icon="icons.mdiCogOutline"></nav-menu-link>
+
+      <nav-menu-section-title title="이하 템플릿 기능들"></nav-menu-section-title>
       <nav-menu-link
         title="Account Settings"
         :to="{ name: 'pages-account-settings' }"
@@ -39,7 +56,6 @@
         <nav-menu-link title="Register" :to="{ name: 'pages-register' }" target="_blank"></nav-menu-link>
         <nav-menu-link title="Error" :to="{ name: 'error-404' }" target="_blank"></nav-menu-link>
       </nav-menu-group>
-      <nav-menu-section-title title="USER INTERFACE"></nav-menu-section-title>
       <nav-menu-link title="Typography" :to="{ name: 'typography' }" :icon="icons.mdiAlphaTBoxOutline"></nav-menu-link>
       <nav-menu-link title="Icons" :to="{ name: 'icons' }" :icon="icons.mdiEyeOutline"></nav-menu-link>
       <nav-menu-link title="Cards" :to="{ name: 'cards' }" :icon="icons.mdiCreditCardOutline"></nav-menu-link>
@@ -73,6 +89,12 @@ import {
   mdiFileOutline,
   mdiFormSelect,
   mdiAccountCogOutline,
+  mdiFileMultipleOutline,
+  mdiAccountDetailsOutline,
+  mdiCogOutline,
+  mdiAlarmLightOutline,
+  mdiAbacus,
+  mdiCheckOutline,
 } from '@mdi/js'
 import NavMenuSectionTitle from './components/NavMenuSectionTitle.vue'
 import NavMenuGroup from './components/NavMenuGroup.vue'
@@ -101,6 +123,12 @@ export default {
         mdiFileOutline,
         mdiFormSelect,
         mdiAccountCogOutline,
+        mdiFileMultipleOutline,
+        mdiAccountDetailsOutline,
+        mdiCogOutline,
+        mdiAlarmLightOutline,
+        mdiAbacus,
+        mdiCheckOutline,
       },
     }
   },

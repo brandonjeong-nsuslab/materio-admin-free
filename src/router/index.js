@@ -12,7 +12,32 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: () => import('@/views/dashboard/Dashboard.vue'),
-  },
+	},
+	{
+		path: '/report',
+		name: 'report',
+		component: () => import('@/views/report/Report.vue')
+	},
+	{
+		path: '/check-server',
+		name: 'check-server',
+		component: () => import('@/views/server-status/CheckServer.vue')
+	},
+	{
+		path: '/maintenance',
+		name: 'maintenance',
+		component: () => import('@/views/server-status/Maintenance.vue')
+	},
+	{
+		path: '/players',
+		name: 'players',
+		component: () => import('@/views/players/Players.vue')
+	},
+	{
+		path: '/admin',
+		name: 'admin',
+		component: () => import('@/views/admin/Admin.vue')
+	},
   {
     path: '/typography',
     name: 'typography',
